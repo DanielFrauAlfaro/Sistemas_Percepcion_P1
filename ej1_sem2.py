@@ -29,5 +29,8 @@ pared3 = copy.deepcopy(pared1).rotate(R,center=(50,50,0))
 pared4 = copy.deepcopy(pared3).translate((50,100,50),relative=False)
 
 # Mostrar nube de puntos
-o3d.visualization.draw_geometries([suelo,techo,pared1,pared2,pared3,pared4,tejado1,tejado2])
+#o3d.visualization.draw_geometries([suelo,techo,pared1,pared2,pared3,pared4,tejado1,tejado2])
 
+pcd = o3d.io.read_point_cloud("TUT_O3D/cloud_291.pcd")
+# Mostrar nube
+o3d.visualization.draw_geometries([pcd])
